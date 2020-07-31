@@ -7,12 +7,7 @@ Docker-Compose 编排LNMP环境
 	Redis
 	phpMyAdmin
 	phpRedisAdmin
-
-
-PHP7.2
-Nginx
-MySQL5.6
-Redis
+##默认关闭phpMyAdmin和phpRedisAdmin，如需要，更改docker-compose-fast.yml打开即可！
 目录结构
 lnmp
 |----docker                             Docker目录
