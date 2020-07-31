@@ -31,8 +31,7 @@ lnmp
 |----www                                应用根目录
 |--------index.php                      PHP例程
 |----README.md                          说明文件
-|----docker-compose.yml                 docker compose 配置文件(完整版: LNMP+Redis+phpMyAdmin+phpRedisAdmin)
-|----docker-compose-simplify.yml        docker compose 配置文件(精简版: LNMP+Redis)
+|----docker-compose-fast.yml                 docker compose 配置文件
 准备
 # 安装docker和docker-compose
 yum -y install epel-release 
