@@ -22,7 +22,7 @@ lnmp
 |----------------docker-entrypoint.sh   nginx 启动脚本  
 |--------log                            日志文件目录  
 |------------php                        php-fpm日志文件目录  
-|------------nginx                      nginx日志文件目  录
+|------------nginx                      nginx日志文件目录  
 |----www                                应用根目录  
 |--------index.php                      PHP例程  
 |----README.md                          说明文件  
