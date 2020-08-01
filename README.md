@@ -54,9 +54,9 @@ systemctl daemon-reload
 systemctl restart docker 
 ```
 # 安装
-克隆项目  
+1. 克隆项目  
 `git clone https://github.com/godxihua/lnmp.git`  
-进入目录,容器编排    
+2. 进入目录,容器编排    
 ```
 cd lnmp    
 docker-compose -f docker-compose-fast.yml up -d  
