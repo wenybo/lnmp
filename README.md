@@ -39,20 +39,7 @@ yum -y install docker docker-compose
 systemctl enable docker  
 systemctl start docker  
 ```  
-配置阿里云docker镜像加速器(建议配置加速器,可以提升docker拉取镜像的速度)  
-```
-mkdir -p /etc/docker
-vim /etc/docker/daemon.json
-新增下面内容  
-{
-    "registry-mirrors": ["https://8auvmfwy.mirror.aliyuncs.com"]
-}
-```
-重新加载配置、重启docker  
-```
-systemctl daemon-reload 
-systemctl restart docker 
-```
+
 # 安装
 1. 克隆项目  
 `git clone https://github.com/godxihua/lnmp.git`  
