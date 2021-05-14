@@ -1,20 +1,21 @@
-version: '3'
+version: '3.3'
 services:
   php:
     container_name: php
-    image: daocloud.io/library/php:7.2.10
+    image: bitnami/php-fpm
     tty: true
     restart: always
     expose:
       - "9000"
     volumes:
+      - ./html:/data/html
       - ./log/php:/var/log/php-fpm
     depends_on:
       - mysql
       - redis
     links:
-      - mysql:mysql
-      - redis:redis
+      - "mysql:mysql"
+      - "redis:redis"
   nginx:
     container_name: nginx
     image: daocloud.io/library/nginx:1.18.0
@@ -24,13 +25,13 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./www:/data/www
+      - ./html:/data/html
       - ./config/nginx/conf.d:/etc/nginx/conf.d
       - ./log/nginx:/var/log/nginx
     depends_on:
       - php
     links:
-      - php
+      - "php:php"
   mysql:
     container_name: mysql
     image: daocloud.io/library/mysql:5.7.21
