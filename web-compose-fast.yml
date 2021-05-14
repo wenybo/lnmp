@@ -3,7 +3,7 @@ version: '3'
 services:
   php:
     container_name: php
-    image: registry.cn-beijing.aliyuncs.com/duiying/php7.2:1.0
+    image: daocloud.io/library/php:7.2.10
     tty: true
     restart: always
     expose:
@@ -19,7 +19,7 @@ services:
       - redis:redis
   nginx:
     container_name: nginx
-    image: registry.cn-beijing.aliyuncs.com/duiying/nginx:1.0
+    image: daocloud.io/library/nginx:1.18.0
     tty: true
     restart: always
     ports:
@@ -35,7 +35,7 @@ services:
       - php
   mysql:
     container_name: mysql
-    image: daocloud.io/library/mysql:5.7.30
+    image: daocloud.io/library/mysql:5.7.21
     restart: always
     expose:
       - "3306"
