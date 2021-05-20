@@ -1,6 +1,6 @@
 # docker-compose 编排LNMP环境  
 App list：
-- PHP7.2  
+- PHP7.0
 - Nginx  
 - MySQL5.7  
 - Redis  
