@@ -13,11 +13,10 @@ lnmp
 |--------config                         配置文件目录  
 |------------nginx                      nginx配置文件目录  
 |--------log                            日志文件目录  
-|------------nginx                      nginx日志文件目录  
 |----html                               应用根目录  
 |--------index.php                      PHP例程  
 |----README.md                          说明文件  
-|----docker-compose-fast.yml            docker compose 配置文件  
+|----shyr.yml            docker compose 配置文件  
 
 # 准备  
 安装docker和docker-compose  
@@ -37,5 +36,5 @@ systemctl start docker
 2. 进入目录,容器编排    
 ```
 cd lnmp    
-docker-compose -f docker-compose-fast.yml up -d  
+docker-compose -f shyr.yml up -d  
 ```
