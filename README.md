@@ -1,11 +1,9 @@
 # docker-compose 编排LNMP环境  
 App list：
-- PHP7.0
+- PHP7.2
 - Nginx  
 - MySQL5.7  
 - Redis  
-- PHPmysqladmin  
-- PHPredisadmin  
   
 默认关闭mysqladmin和redisadmin，如需要，需自行修改docker-compose-fast.yml配置文件  
 # 目录结构  
