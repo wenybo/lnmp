@@ -2,7 +2,7 @@ version: '3.3'
 services:
   php:
     container_name: php
-    image: php:7.0-fpm
+    image: php:7.2-fpm
     tty: true
     restart: always
     expose:
@@ -18,7 +18,7 @@ services:
       - "redis:redis"
   nginx:
     container_name: nginx
-    image: daocloud.io/library/nginx:1.18.0
+    image: nginx:1.18.0
     tty: true
     restart: always
     ports:
@@ -32,9 +32,11 @@ services:
       - php
     links:
       - "php:php"
+      - "mysql:mysql"
+      - "redis:redis"
   mysql:
     container_name: mysql
-    image: daocloud.io/library/mysql:5.7.21
+    image: mysql:5.7.21
     restart: always
     expose:
       - "3306"
@@ -46,7 +48,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
   redis:
     container_name: redis
-    image: daocloud.io/library/redis
+    image: redis:6.2.7
     restart: always
     expose:
       - "6379"
@@ -55,31 +57,3 @@ services:
     volumes:
       - ./data/redis:/data
     command: redis-server --appendonly yes 
-#  phpmyadmin:
-#    container_name: phpmyadmin
-#    image: daocloud.io/daocloud/phpmyadmin
-#    expose:
-#      - '80'
-#    ports:
-#      - "8080:80"
-#    environment:
-#      - PMA_ARBITRARY=0
-#      - PMA_HOST=mysql
-#    depends_on:
-#      - mysql
-#    links:
-#      - mysql:mysql
-#  phpredisadmin:
-#    container_name: phpredisadmin
-#    image: erikdubbelboer/phpredisadmin
-#    expose:
-#      - '80'
-#    ports:
-#      - "8081:80"
-#    environment:
-#      - REDIS_1_HOST=redis
-#      - REDIS_1_NAME=redis
- #   depends_on:
- #     - redis
- #   links:
- #     - redis:redis
