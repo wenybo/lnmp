@@ -1,6 +1,6 @@
 # docker-compose 编排LNMP环境  
 App list：
-- PHP7.2（默认没有安装mysqli数据库连接插件）
+- PHP7.2
 - Nginx  
 - MySQL5.7  
 - Redis  
