@@ -7,6 +7,8 @@ services:
     restart: always
     expose:
       - "9000"
+    environment:
+      TZ : 'Asia/Shanghai'
     volumes:
       - ./html:/data/html
       - ./log/php:/var/log/php-fpm
@@ -24,6 +26,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      TZ : 'Asia/Shanghai'
     volumes:
       - ./html:/data/html
       - ./config/nginx/conf.d:/etc/nginx/conf.d
@@ -42,6 +46,8 @@ services:
       - "3306"
     ports:
       - "3306:3306"
+    environment:
+      TZ : 'Asia/Shanghai'
     volumes:
       - ./data/mysql:/var/lib/mysql
     environment:
