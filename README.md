@@ -5,14 +5,14 @@ App list：
 - MySQL5.7  
 - Redis  
   
-默认关闭mysqladmin和redisadmin，如需要，需自行修改docker-compose-fast.yml配置文件  
+
 # 目录结构  
 lnmp  
-|--------config                         配置文件目录  
+|----config                         配置文件目录  
 |------------nginx                      nginx配置文件目录  
-|--------log                            日志文件目录  
+|------------log                        日志文件目录  
 |----html                               应用根目录  
-|--------index.php                      PHP例程  
+|------------index.php                      PHP例程  
 |----README.md                          说明文件  
 |----shyr.yml            docker compose 配置文件  
 
